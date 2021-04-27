@@ -10,6 +10,12 @@ const connectLivereload = require('connect-livereload');
 // Request
 const request = require('request');
 
+// |||||||||||||||||||||||||||||||||||||||||||||||||||
+const app = express();
+
+// Setup environment for port
+const port = process.env.PORT || 3000;
+
 const rateLimit = require('express-rate-limit');
 
 const limiter = rateLimit({
@@ -21,7 +27,7 @@ const limiter = rateLimit({
 // movie instance
 const getMovies = require('./utils/movie');
 
-// |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+// ||||||||||||||||||||||||||||||||||||||||||||||||||||
 // Setup path for public folder
 const publicDirectoryPath = path.join(__dirname, '../public');
 
@@ -37,9 +43,6 @@ liveReloadServer.server.once('connection', () => {
     liveReloadServer.refresh('/');
   }, 100);
 });
-
-// |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-const app = express();
 
 // Rate limiter
 app.set('trust proxy', 1);
@@ -95,6 +98,6 @@ app.get('*', (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log('Server is up on port 3000');
+app.listen(port, () => {
+  console.log('Server is up on port ' + port);
 });
