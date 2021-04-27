@@ -14,7 +14,7 @@ const fetchMovies = async (searchTerm) => {
   movieDate.innerHTML = '';
 
   // ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-  // const url = `http://localhost:3000/movies?search=${searchTerm}`;
+
   const url = `/movies?search=${searchTerm}`;
 
   try {
