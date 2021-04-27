@@ -1,0 +1,150 @@
+:root {
+  --clr-gray-light: #d7dfe2;
+  --clr-gray-med: #616b74;
+  --clr-gray-dark: #414b56;
+  --clr-link: #4d97b2;
+  --clr-popular: #ef257a;
+  --clr-technology: #651fff;
+  --clr-psychology: #e85808;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: lightcoral;
+  background-color: #34434a;
+  font-family: Arial, Helvetica, sans-serif;
+  /* max-width: 650px; */
+  margin: 10rem auto;
+  color: var(--clr-gray-dark);
+  color: #aaaeb1;
+}
+
+/* SECOND MOVIE */
+
+.main__container {
+  display: flex;
+  flex-direction: column;
+  background: #273238;
+  box-shadow: 0px 2px 20px #29363b;
+  max-width: 55rem;
+  margin: 1rem;
+}
+.card {
+  overflow: hidden;
+  /* box-shadow: 0px 2px 20px var(--clr-gray-light); */
+  /* box-shadow: 0px 2px 20px #29363b; */
+  background: #273238;
+  border-radius: 0.5rem;
+  position: relative;
+  max-width: 55rem;
+
+  /* outline: 1px solid red; */
+}
+.input__field {
+  width: 50%;
+  background: #273238;
+  padding: 1rem;
+  outline: none;
+  border: none;
+  color: white;
+}
+
+.movie__container {
+  display: flex;
+  justify-content: space-between;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+.card__banner {
+  width: 40%;
+  height: 25rem;
+}
+.banner__image {
+  width: 100%;
+}
+.card__body {
+  width: 57%;
+}
+
+.card__title {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.card__movie_release {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.date {
+  margin-right: 1rem;
+}
+
+.date,
+.vote {
+  color: var(--clr-popular);
+}
+
+.card__description {
+  padding-right: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+
+.logo {
+  width: 100%;
+  /* outline: 1px solid blue; */
+  /* margin-left: 1rem; */
+  border-top: 1px solid #29363b;
+  width: 100%;
+}
+
+.logo__image {
+  max-width: 50%;
+  margin: 1rem auto;
+}
+
+@media (max-width: 549px) {
+  .main__container {
+    max-width: 30rem;
+    margin: 0 auto;
+  }
+  .card {
+    /* max-width: 25rem;
+    max-width: 85%;
+    margin: 0 auto; */
+    /* outline: 1px solid red; */
+    margin: 0;
+  }
+  .movie__container {
+    flex-direction: column;
+  }
+  .card__banner {
+    width: 100%;
+  }
+
+  .banner__image {
+    width: 100%;
+    /*  */
+  }
+
+  .card__body {
+    width: 100%;
+    padding: 1rem;
+  }
+}
